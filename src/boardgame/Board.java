@@ -5,6 +5,7 @@ public class Board {
 	private int rows;
 	private int colums;
 	private Piece[][] pieces;
+	
 	public Board(int rows, int colums) {
 		this.rows = rows;
 		this.colums = colums;
@@ -22,7 +23,11 @@ public class Board {
 	public void setColums(int colums) {
 		this.colums = colums;
 	}
-	
-	
+	public Piece piece(int row, int colum) {
+		return pieces[row][colum];
+	}
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColum()];
+	}
 
 }
